@@ -43,7 +43,13 @@ $ cd client
 $ yarn install
 $ yarn dev
 ```
-The GraphQL server run on http://localhost:3000/ , the applications is ready.
+The server run on http://localhost:3001/ , if is the test stage the applications is ready.
+
+## Endpoints List
+
+ - http://127.0.0.1:3001/api/characters/{page}/{limit}?filter={filter} [GET] (Get All Character)
+ - http://127.0.0.1:3001/api/character/id/{id} [GET] (Get Character by ID)
+ - http://127.0.0.1:3001/api/character/sync [GET] (Sync the characters)
 
 License
 ----
