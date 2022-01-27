@@ -1,123 +1,54 @@
-# Prueba de Experiencia (FullStack)
-Esta prueba fue ideada para medir el nivel de conocimientos y experiencia tanto en sintaxis como de las distintas API's de `javascript`.
+# GOT - CHaracters
+# Application for show the character of Game oif Throne.
 
-> **¡IMPORTANTE!**
->
-> Esta es una prueba FullStack, por tanto **NO** es necesario añadir diseño(colores, temas, fuentes, etc)
+The present project consists of the consumption a content from the REST API of GOT
 
+The technology for endpoint manipulation of data is TypeORM with typescript
 
-## Puntos a Valorar
-* Implementación adecuada de `let`, `const`, `var`.
-* Implementación de `class`.
-* Implementación de `constructor`.
-* Implementación de `() =>`.
-* Implementación de interpolación de `string`.
-* Implementación de concepto `destructuring`.
-* Implementación de valores por defecto.
-* Implementación de modulos**(opcional)**
-* Implementación de `reduce`, `map`, `filter`, `find`, `findIndex`, `flat`, `flatMap`, `some`.
-* Implementación de `Promise`
-* Implementación de `async` y `await`.
-* Uso correcto de herramienta git(commit, flow, ...).
-* Uso correcto de base de datos(consultas, modelos, ...).
-* Implementación adecuada de frameworks en backend.
+Likewise, the Server responsible for raising the application from the backend is Express
 
+The technologies used to develop it were:.
 
-## Recomendaciones
-* Utilizar 2 espacios como tabulación.
-* Archivos en `utf8` sin `BOM`
-* Una clase, un archivo.
-* Nombre de clases en UpperCamelCase
-* Nombre de metodos en camelCase
-* Puedes importar cualquier librería que pueda ser de ayuda para tu solución (`moment`, `lodash`, etc).
-* Puedes usar cualquier manejador de paquetes como `npm`, `yarn`, `bower`, etc.
-* No hay restricción de IDE.
-* No se requiere diseño o estilos.
+  - Express
+  - NodeJS
+  - Typescript
+  - NextJS
+  - Tailwind
 
+# Get started
 
-## Stack de Herramientas Disponibles
-Podras usar cualquiera de las siguientes herramientas exceptuando lo tachado.
-### Backend
-* [x] Feathers
-* [x] Express
-* [x] Hapi
-* [x] SocketIO
-* [x] HTTP
-* [x] HTTPS
-* [x] LoopBack
-* [x] Nest
-* [x] Serverless
-* [x] Amazon Web Service Lambda
-* [x] Azure Function Apps
-* [x] Google Cloud Function
-### FrontEnd
-* [ ] ~~Angularjs~~
-* [x] Angular<sup>2+</sup>
-* [x] Ionic<sup>2+</sup>
-* [x] Bootstrap<sup>3+</sup>
-* [x] Vue
-* [x] React
-* [x] ReactNative
-* [x] HTML5 + CSS + Javascript
-### Base de Datos
-* [x] SQL Server
-* [x] MySQL/MariaDB
-* [x] MongoDB
-* [x] Postgres
-* [x] Oracle
-* [x] Cassandra
-* [x] PuchDB
-* [x] Firebase
-* [x] SQLite<sup>3+</sup>
-* [x] DynamoDB
-* [x] Couchdb
-* [x] Redis
-* [x] File System(JSON, CSV, ...)
-### Extras
-* [x] JSX
-* [x] TypeScript
-* [x] ES5+
-
-
-## Para comenzar
-Deberas solicitar acceso al proyecto mediente el siguiente [enlace](https://gitlab.com/tactech/prueba-seleccion-fullstack/project_members/request_access), una vez solicitado el acceso, se te concederan **24h** para realizar un fork y enviar un pull-request con las soluciones a los problemas planteados.
+Clone the repository
 ```sh
-git clone https://gitlab.com/tactech/prueba-seleccion-fullstack.git
+https://github.com/ivanojgarcia/got-characters.git
 ```
+Install developer dependencies (installation of dependencies from the package-json)
 
-## Desafío
+- First we must to configure our database, for that, is nescesary configure the .env file with the data of the database
+- Exist a endpoint that can use for add the data from the API-GOT `/api/character/sync`
+- For init The server, we will do the following:
 
-### Capacidades Backend
-> **¡IMPORTANTE!**
->
-> Deberas realizar esta prueba en el directorio `backend/` de este repositorio.
-> En caso de que la API [Game of Thrones Show](https://api.got.show/doc/) no este funcionando, podras usar la API de [An API of Ice and Fire](https://anapioficeandfire.com/)
+```sh
+$ cd backend
+$ npm install
+$ npm start:dev or npm start:test or npm start
+```
+If is necesary can you delete the package-lock.json
 
-Se debera implementar una aplicación en Backend, la cual debera contener un servicio que conecte, extraiga y almacene los personajes desde de la API [Game of Thrones Show](https://api.got.show/doc/), par esto deberas utilizar alguna base de datos.
-Una vez almacenados los personajes, se deberan implementar dos endpoints para acceso publico:
+### Installation of client
 
-| Metodo | Endpoint        | Descripción                                                   |
-|--------|-----------------|---------------------------------------------------------------|
-| GET    | /characters/:id | Obtiene la información del personaje determinado por su `id`  |
-| GET    | /characters     | Obtiene una lista de personjes, la cual permite la paginación |
+To start the client we just have to install the dependencies
 
+```sh
+$ cd client
+$ yarn install
+$ yarn dev
+```
+The GraphQL server run on http://localhost:3000/ , the applications is ready.
 
-### Capacidades en frontend
-> **¡IMPORTANTE!**
->
-> Deberas realizar esta prueba en el directorio `frontend/` de este repositorio.
+License
+----
 
-Deberás crear un proyecto a partir de cero en `React`, `Angular`, `React Native`, `Ionic` o `Vue`, con el cual deberás consumir las API creadas con `Express`.
-Una vez implementado el proyecto front, se debera proceder a crear dos vistas:
- 
-| Vista | Descripción                                                                                                                                                                       |
-|-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| List  | Aca se debera listar todos los personajes con un servicio de paginación, limitando a 10 personajes por pagina e implementado un buscador de texto para filtrar por nombre o casa. |
-| View  | Aca debe mostrarse la información referente al persoje objetivo, incluyendo su imagen(si es que tiene), sexo, slug, rank, casa, libros y titulos                                  |
+MIT
 
 
-
-Suerte y mucho exito!
-====
-Estaremos muy contentos con tu respuesta 💪
-
+**Thanks!**

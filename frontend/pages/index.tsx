@@ -28,6 +28,9 @@ export default function Home() {
       setLoading(false);
     } 
 
+  const searchCharacter = () => {
+    
+  }
   const nextPage = () => {
     setLoading(true);
     setPage(page => page + 1);
